@@ -1,0 +1,8 @@
+node_modules/
+android/
+webview/app/build/
+webview/.gradle/
+.expo/
+*.apk
+*.ipa
+.DS_Store

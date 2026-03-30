@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "Word Wizard",
+    "slug": "word-wizard",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mayanksr.wordwizard"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#667eea"
+      },
+      "package": "com.mayanksr.wordwizard"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b4fc5b9c-3b21-4120-85ce-9ab4d391ca4a"
+      }
+    },
+    "owner": "mayanksrkumar16"
+  }
+}
