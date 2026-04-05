@@ -69,6 +69,7 @@ export default function App() {
 
   const [filledSlots, setFilledSlots] = useState([]);
   const [usedTiles, setUsedTiles] = useState([]);
+  const [selectedTile, setSelectedTile] = useState(null);
   const [feedback, setFeedback] = useState({ text: '', type: '' });
   const [showStartModal, setShowStartModal] = useState(true);
   const [showLevelModal, setShowLevelModal] = useState(false);
@@ -119,38 +120,35 @@ export default function App() {
   };
 
   const handleSlotPress = (index) => {
-    if (filledSlots[index]) {
-      const letter = filledSlots[index];
-      setFilledSlots(prev => {
-        const newSlots = [...prev];
-        newSlots[index] = null;
-        return newSlots;
-      });
-      setUsedTiles(prev => prev.filter(t => t !== letter));
+    if (filledSlots[index]) return;
+    
+    if (selectedTile) {
+      const correctLetter = gameState.currentWord[index];
+      if (selectedTile === correctLetter) {
+        setFilledSlots(prev => {
+          const newSlots = [...prev];
+          newSlots[index] = selectedTile;
+          return newSlots;
+        });
+        setUsedTiles(prev => [...prev, selectedTile]);
+        setSelectedTile(null);
+        checkWord();
+      } else {
+        setWrongSlot(index);
+        setTimeout(() => setWrongSlot(null), 500);
+        setGameState(prev => ({ ...prev, attempts: prev.attempts + 1, streak: 0 }));
+        setFeedback({ text: 'Try again!', type: 'error' });
+      }
     }
   };
 
   const handleTilePress = (letter) => {
     if (usedTiles.includes(letter)) return;
     
-    const emptyIndex = filledSlots.findIndex((slot, idx) => slot === null);
-    if (emptyIndex === -1) return;
-
-    const correctLetter = gameState.currentWord[emptyIndex];
-    
-    if (letter === correctLetter) {
-      setFilledSlots(prev => {
-        const newSlots = [...prev];
-        newSlots[emptyIndex] = letter;
-        return newSlots;
-      });
-      setUsedTiles(prev => [...prev, letter]);
-      checkWord();
+    if (selectedTile === letter) {
+      setSelectedTile(null);
     } else {
-      setWrongSlot(emptyIndex);
-      setTimeout(() => setWrongSlot(null), 500);
-      setGameState(prev => ({ ...prev, attempts: prev.attempts + 1, streak: 0 }));
-      setFeedback({ text: 'Try again!', type: 'error' });
+      setSelectedTile(letter);
     }
   };
 
@@ -382,7 +380,8 @@ export default function App() {
               key={index}
               style={[
                 styles.letterTile,
-                usedTiles.includes(letter) && styles.letterTileUsed
+                usedTiles.includes(letter) && styles.letterTileUsed,
+                selectedTile === letter && styles.letterTileSelected
               ]}
               onPress={() => handleTilePress(letter)}
               disabled={usedTiles.includes(letter)}
@@ -676,6 +675,11 @@ const styles = StyleSheet.create({
   },
   letterTileUsed: {
     opacity: 0.3,
+  },
+  letterTileSelected: {
+    borderColor: '#f97316',
+    borderWidth: 3,
+    transform: [{ scale: 1.1 }],
   },
   letterText: {
     fontSize: 24,
