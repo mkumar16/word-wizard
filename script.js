@@ -54,7 +54,8 @@ const gameState = {
     maxAttempts: 0,
     soundEnabled: true,
     gameStarted: false,
-    shuffledWords: []
+    shuffledWords: [],
+    selectedTile: null
 };
 
 // DOM Elements
@@ -215,6 +216,7 @@ function startGame() {
     gameState.score = 0;
     gameState.streak = 0;
     gameState.wordsCompleted = 0;
+    gameState.selectedTile = null;
     
     prepareLevel();
 }
@@ -226,6 +228,7 @@ function prepareLevel() {
     gameState.currentWordIndex = 0;
     gameState.levelWordsCompleted = 0;
     gameState.maxAttempts = wordDatabase[gameState.currentLevel].length;
+    gameState.selectedTile = null;
     
     updateUI();
     loadWord();
@@ -237,6 +240,7 @@ function loadWord() {
     gameState.currentWord = wordData.word;
     gameState.hintsUsed = 0;
     gameState.attempts = 0;
+    gameState.selectedTile = null;
     
     // Update display
     elements.hintEmoji.textContent = wordData.hint;
@@ -265,19 +269,36 @@ function createWordSlots() {
         slot.dataset.index = i;
         slot.dataset.letter = gameState.currentWord[i];
         
-        // Drag and drop events
-        slot.addEventListener('dragover', handleDragOver);
-        slot.addEventListener('dragleave', handleDragLeave);
-        slot.addEventListener('drop', handleDrop);
-        
-        // Click to remove letter
-        slot.addEventListener('click', () => {
-            if (slot.classList.contains('filled')) {
-                removeLetterFromSlot(slot);
-            }
-        });
+        // Click to place selected letter
+        slot.addEventListener('click', () => handleSlotClick(slot));
         
         elements.wordSlots.appendChild(slot);
+    }
+}
+
+// Handle slot click - place selected letter
+function handleSlotClick(slot) {
+    // If slot is already filled, do nothing (locked)
+    if (slot.classList.contains('filled')) return;
+    
+    // If a tile is selected, try to place it
+    if (gameState.selectedTile) {
+        const letter = gameState.selectedTile;
+        const slotLetter = slot.dataset.letter;
+        
+        if (letter === slotLetter) {
+            // Correct letter - place it
+            placeLetter(slot, letter);
+        } else {
+            // Wrong letter
+            playSound('error');
+            slot.classList.add('incorrect');
+            setTimeout(() => slot.classList.remove('incorrect'), 500);
+            gameState.attempts++;
+            resetStreak();
+            elements.feedback.textContent = 'Try again!';
+            elements.feedback.className = 'feedback error';
+        }
     }
 }
 
@@ -297,169 +318,65 @@ function createLetterBank() {
         const tile = document.createElement('div');
         tile.className = 'letter-tile';
         tile.textContent = letter;
-        tile.draggable = true;
         tile.dataset.letter = letter;
         
-        // Drag events
-        tile.addEventListener('dragstart', handleDragStart);
-        tile.addEventListener('dragend', handleDragEnd);
-        
-        // Touch events for mobile
-        tile.addEventListener('touchstart', handleTouchStart, { passive: false });
-        tile.addEventListener('touchmove', handleTouchMove, { passive: false });
-        tile.addEventListener('touchend', handleTouchEnd);
+        // Click to select/deselect
+        tile.addEventListener('click', () => handleTileClick(tile));
         
         elements.letterBank.appendChild(tile);
     });
 }
 
-// Drag and Drop Handlers
-let draggedTile = null;
-
-function handleDragStart(e) {
+// Handle tile click - select/deselect
+function handleTileClick(tile) {
+    // If tile is already used, do nothing
+    if (tile.classList.contains('used')) return;
+    
     playSound('click');
-    draggedTile = e.target;
-    e.target.classList.add('dragging');
-    e.dataTransfer.effectAllowed = 'move';
-    e.dataTransfer.setData('text/plain', e.target.dataset.letter);
-}
-
-function handleDragEnd(e) {
-    e.target.classList.remove('dragging');
-}
-
-function handleDragOver(e) {
-    e.preventDefault();
-    e.dataTransfer.dropEffect = 'move';
-    e.target.classList.add('drag-over');
-}
-
-function handleDragLeave(e) {
-    e.target.classList.remove('drag-over');
-}
-
-function handleDrop(e) {
-    e.preventDefault();
-    e.target.classList.remove('drag-over');
+    const letter = tile.dataset.letter;
     
-    if (!draggedTile || !e.target.classList.contains('word-slot')) return;
-    if (e.target.classList.contains('filled')) return;
-    
-    const letter = draggedTile.dataset.letter;
-    const slotLetter = e.target.dataset.letter;
-    
-    // Check if correct letter
-    if (letter === slotLetter) {
-        placeLetter(draggedTile, e.target, slotLetter);
+    // Toggle selection
+    if (gameState.selectedTile === letter) {
+        // Deselect
+        gameState.selectedTile = null;
     } else {
-        // Wrong letter
-        playSound('error');
-        e.target.classList.add('incorrect');
-        setTimeout(() => e.target.classList.remove('incorrect'), 500);
-        gameState.attempts++;
-        resetStreak();
+        // Select new tile
+        gameState.selectedTile = letter;
     }
+    
+    updateTileSelection();
 }
 
-// Touch Event Handlers for Mobile
-let touchedTile = null;
-let touchClone = null;
-
-function handleTouchStart(e) {
-    e.preventDefault();
-    playSound('click');
-    touchedTile = e.target;
-    
-    // Create visual clone for dragging
-    touchClone = touchedTile.cloneNode(true);
-    touchClone.style.position = 'fixed';
-    touchClone.style.pointerEvents = 'none';
-    touchClone.style.zIndex = '1000';
-    touchClone.style.opacity = '0.8';
-    touchClone.style.transform = 'scale(1.2)';
-    document.body.appendChild(touchClone);
-    
-    updateTouchClonePosition(e.touches[0]);
-}
-
-function handleTouchMove(e) {
-    e.preventDefault();
-    if (!touchClone) return;
-    
-    updateTouchClonePosition(e.touches[0]);
-    
-    // Highlight slot under touch
-    const touch = e.touches[0];
-    const elementBelow = document.elementFromPoint(touch.clientX, touch.clientY);
-    
-    document.querySelectorAll('.word-slot').forEach(slot => {
-        slot.classList.remove('drag-over');
-    });
-    
-    if (elementBelow && elementBelow.classList.contains('word-slot')) {
-        elementBelow.classList.add('drag-over');
-    }
-}
-
-function handleTouchEnd(e) {
-    if (!touchClone || !touchedTile) return;
-    
-    const touch = e.changedTouches[0];
-    const elementBelow = document.elementFromPoint(touch.clientX, touch.clientY);
-    
-    if (elementBelow && elementBelow.classList.contains('word-slot') && !elementBelow.classList.contains('filled')) {
-        const letter = touchedTile.dataset.letter;
-        const slotLetter = elementBelow.dataset.letter;
-        
-        if (letter === slotLetter) {
-            placeLetter(touchedTile, elementBelow, slotLetter);
-        } else {
-            playSound('error');
-            elementBelow.classList.add('incorrect');
-            setTimeout(() => elementBelow.classList.remove('incorrect'), 500);
-            gameState.attempts++;
-            resetStreak();
+// Update visual selection state
+function updateTileSelection() {
+    const tiles = document.querySelectorAll('.letter-tile');
+    tiles.forEach(tile => {
+        tile.classList.remove('selected');
+        if (tile.dataset.letter === gameState.selectedTile) {
+            tile.classList.add('selected');
         }
-    }
-    
-    // Cleanup
-    touchClone.remove();
-    touchClone = null;
-    touchedTile = null;
-    
-    document.querySelectorAll('.word-slot').forEach(slot => {
-        slot.classList.remove('drag-over');
     });
-}
-
-function updateTouchClonePosition(touch) {
-    if (!touchClone) return;
-    touchClone.style.left = (touch.clientX - 25) + 'px';
-    touchClone.style.top = (touch.clientY - 25) + 'px';
 }
 
 // Place letter in slot
-function placeLetter(tile, slot, letter) {
+function placeLetter(slot, letter) {
     playSound('click');
-    tile.classList.add('used');
+    
+    // Mark the tile as used
+    const tile = document.querySelector(`.letter-tile[data-letter="${letter}"]`);
+    if (tile) {
+        tile.classList.add('used');
+    }
+    
     slot.textContent = letter;
     slot.classList.add('filled');
     
+    // Clear selection
+    gameState.selectedTile = null;
+    updateTileSelection();
+    
     // Check if word is complete
     checkWord();
-}
-
-// Remove letter from slot
-function removeLetterFromSlot(slot) {
-    const letter = slot.textContent;
-    slot.textContent = '';
-    slot.classList.remove('filled', 'correct');
-    
-    // Find and enable the corresponding tile
-    const tile = document.querySelector(`.letter-tile[data-letter="${letter}"].used`);
-    if (tile) {
-        tile.classList.remove('used');
-    }
 }
 
 // Check if word is complete and correct
@@ -627,6 +544,10 @@ function resetWord() {
         tile.classList.remove('used');
     });
     
+    // Clear selection
+    gameState.selectedTile = null;
+    updateTileSelection();
+    
     elements.feedback.textContent = '';
     elements.feedback.className = 'feedback';
 }
@@ -682,6 +603,7 @@ function resetGame() {
     gameState.score = 0;
     gameState.streak = 0;
     gameState.wordsCompleted = 0;
+    gameState.selectedTile = null;
     
     prepareLevel();
 }

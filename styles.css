@@ -360,6 +360,12 @@ body {
     transform: scale(0.9);
 }
 
+.letter-tile.selected {
+    border: 3px solid #f97316;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(249, 115, 22, 0.5);
+}
+
 .letter-tile.hint-reveal {
     animation: hint-glow 1s ease infinite;
 }
