@@ -54,24 +54,24 @@ const wordDatabase = {
             { word: 'PENGUIN', hint: '🐧' }, { word: 'ELEPHANT', hint: '🐘' }, { word: 'UMBRELLA', hint: '☂️' },
             { word: 'RAINBOW', hint: '🌈' }, { word: 'BUTTERFLY', hint: '🦋' }, { word: 'DOLPHIN', hint: '🐬' },
             { word: 'MONKEY', hint: '🐵' }, { word: 'TURTLE', hint: '🐢' }, { word: 'BALLOON', hint: '🎈' },
-            { word: 'PUMPKIN', hint: '🎃' }, { word: 'SPIDER', hint: '🕷️' }, { word: 'RAINBOW', hint: '🌈' },
-            { word: 'DIAMOND', hint: '💎' }, { word: 'CLOWN', hint: '🤡' }, { word: 'WIZARD', hint: '🧙' }
+            { word: 'PUMPKIN', hint: '🎃' }, { word: 'SPIDER', hint: '🕷️' }, { word: 'DIAMOND', hint: '💎' },
+            { word: 'CLOWN', hint: '🤡' }, { word: 'WIZARD', hint: '🧙' }, { word: 'RAINBOW', hint: '🌈' }
         ]
     },
     colors: {
         1: [
             { word: 'RED', hint: '🔴' }, { word: 'PINK', hint: '🩷' }, { word: 'TAN', hint: '🟤' },
-            { word: 'TEAL', hint: '🟢' }, { word: 'CYAN', hint: '🔵' }, { word: 'RUBY', hint: '💎' },
-            { word: 'JADE', hint: '🟩' }, { word: 'IVORY', hint: '🤍' }, { word: 'CORAL', hint: '🪸' },
-            { word: 'GOLD', hint: '🥇' }, { word: 'KHAKI', hint: '🟫' }, { word: 'LIME', hint: '🟩' },
-            { word: 'PLUM', hint: '🟣' }, { word: 'RUST', hint: '🟤' }, { word: 'SAND', hint: '🏖️' }
+            { word: 'CYAN', hint: '🔵' }, { word: 'RUBY', hint: '💎' }, { word: 'JADE', hint: '🟩' },
+            { word: 'IVORY', hint: '🤍' }, { word: 'CORAL', hint: '🪸' }, { word: 'GOLD', hint: '🥇' },
+            { word: 'KHAKI', hint: '🟫' }, { word: 'LIME', hint: '🟩' }, { word: 'PLUM', hint: '🟣' },
+            { word: 'RUST', hint: '🟤' }, { word: 'SAND', hint: '🏖️' }, { word: 'NAVY', hint: '💙' }
         ],
         2: [
-            { word: 'BLUE', hint: '🔵' }, { word: 'GRAY', hint: '⬜' }, { word: 'GOLD', hint: '🥇' },
-            { word: 'AZURE', hint: '💙' }, { word: 'BEIGE', hint: '🟨' }, { word: 'CREAM', hint: '🤍' },
-            { word: 'DUSK', hint: '🌅' }, { word: 'HAZEL', hint: '🟤' }, { word: 'MOSS', hint: '🌿' },
-            { word: 'OLIVE', hint: '🫒' }, { word: 'PEARL', hint: '🤍' }, { word: 'ROSE', hint: '🌹' },
-            { word: 'RUBY', hint: '💎' }, { word: 'TEAL', hint: '🌊' }, { word: 'WINE', hint: '🍷' }
+            { word: 'BLUE', hint: '🔵' }, { word: 'GRAY', hint: '⬜' }, { word: 'AZURE', hint: '💙' },
+            { word: 'BEIGE', hint: '🟨' }, { word: 'CREAM', hint: '🤍' }, { word: 'DUSK', hint: '🌅' },
+            { word: 'HAZEL', hint: '🟤' }, { word: 'MOSS', hint: '🌿' }, { word: 'OLIVE', hint: '🫒' },
+            { word: 'PEARL', hint: '🤍' }, { word: 'ROSE', hint: '🌹' }, { word: 'WINE', hint: '🍷' },
+            { word: 'AMBER', hint: '🟠' }, { word: 'BRONZE', hint: '🥉' }, { word: 'SIENNA', hint: '🟤' }
         ],
         3: [
             { word: 'GREEN', hint: '🟢' }, { word: 'WHITE', hint: '⬜' }, { word: 'BLACK', hint: '⬛' },
@@ -83,16 +83,16 @@ const wordDatabase = {
         4: [
             { word: 'ORANGE', hint: '🟠' }, { word: 'PURPLE', hint: '🟣' }, { word: 'YELLOW', hint: '🟡' },
             { word: 'SILVER', hint: '🥈' }, { word: 'MAROON', hint: '🟤' }, { word: 'VIOLET', hint: '💜' },
-            { word: 'INDIGO', hint: '💙' }, { word: 'MAGENTA', hint: '🟣' }, { word: 'SALMON', hint: '🐟' },
-            { word: 'APRICOT', hint: '🍑' }, { word: 'OLIVE', hint: '🫒' }, { word: 'COPPER', hint: '🥉' },
-            { word: 'CRIMSON', hint: '🔴' }, { word: 'SCARLET', hint: '🔴' }, { word: 'CARMINE', hint: '🔴' }
+            { word: 'MAGENTA', hint: '🟣' }, { word: 'SALMON', hint: '🐟' }, { word: 'APRICOT', hint: '🍑' },
+            { word: 'COPPER', hint: '🥉' }, { word: 'CRIMSON', hint: '🔴' }, { word: 'SCARLET', hint: '🔴' },
+            { word: 'CARMINE', hint: '🔴' }, { word: 'CERULEAN', hint: '💙' }, { word: 'CHARCOAL', hint: '⬛' }
         ],
         5: [
-            { word: 'TURQUOISE', hint: '🟢' }, { word: 'LAVENDER', hint: '💜' }, { word: 'MAGENTA', hint: '🟣' },
-            { word: 'CRIMSON', hint: '🔴' }, { word: 'SCARLET', hint: '🔴' }, { word: 'EMERALD', hint: '💚' },
+            { word: 'TURQUOISE', hint: '🟢' }, { word: 'LAVENDER', hint: '💜' }, { word: 'EMERALD', hint: '💚' },
             { word: 'SAPPHIRE', hint: '💙' }, { word: 'AMETHYST', hint: '💜' }, { word: 'CHARCOAL', hint: '⬛' },
             { word: 'CERISE', hint: '🔴' }, { word: 'FUCHSIA', hint: '🟣' }, { word: 'VERMILION', hint: '🔴' },
-            { word: 'AUBURN', hint: '🟤' }, { word: 'SIENNA', hint: '🟤' }, { word: 'OCHRE', hint: '🟨' }
+            { word: 'AUBURN', hint: '🟤' }, { word: 'SIENNA', hint: '🟤' }, { word: 'OCHRE', hint: '🟨' },
+            { word: 'MAHOGANY', hint: '🟤' }, { word: 'TEAL', hint: '🟢' }, { word: 'GOLD', hint: '🥇' }
         ]
     },
     numbers: {
@@ -121,15 +121,15 @@ const wordDatabase = {
             { word: 'ELEVEN', hint: '1️⃣1️⃣' }, { word: 'TWELVE', hint: '1️⃣2️⃣' }, { word: 'THIRTEEN', hint: '1️⃣3️⃣' },
             { word: 'FOURTEEN', hint: '1️⃣4️⃣' }, { word: 'FIFTEEN', hint: '1️⃣5️⃣' }, { word: 'SIXTEEN', hint: '1️⃣6️⃣' },
             { word: 'SEVENTEEN', hint: '1️⃣7️⃣' }, { word: 'EIGHTEEN', hint: '1️⃣8️⃣' }, { word: 'NINETEEN', hint: '1️⃣9️⃣' },
-            { word: 'TWENTY', hint: '2️⃣0️⃣' }, { word: 'FORTY', hint: '4️⃣0️⃣' }, { word: 'FIFTY', hint: '5️⃣0️⃣' },
-            { word: 'SIXTY', hint: '6️⃣0️⃣' }, { word: 'SEVENTY', hint: '7️⃣0️⃣' }, { word: 'EIGHTY', hint: '8️⃣0️⃣' }
+            { word: 'NINETY', hint: '9️⃣0️⃣' }, { word: 'SEVENTY', hint: '7️⃣0️⃣' }, { word: 'EIGHTY', hint: '8️⃣0️⃣' },
+            { word: 'SCORE', hint: '🏆' }, { word: 'DOZEN', hint: '📦' }, { word: 'GROSS', hint: '📦' }
         ],
         5: [
-            { word: 'THIRTY', hint: '3️⃣0️⃣' }, { word: 'NINETY', hint: '9️⃣0️⃣' }, { word: 'HUNDRED', hint: '💯' },
-            { word: 'THOUSAND', hint: '🔢' }, { word: 'MILLION', hint: '🔢' }, { word: 'BILLION', hint: '🔢' },
-            { word: 'TRILLION', hint: '🔢' }, { word: 'QUARTER', hint: '¼' }, { word: 'FRACTION', hint: '½' },
-            { word: 'DECIMAL', hint: '🔢' }, { word: 'INTEGER', hint: '🔢' }, { word: 'PERCENT', hint: '%' },
-            { word: 'NUMBER', hint: '🔢' }, { word: 'DIGIT', hint: '🔢' }, { word: 'COUNT', hint: '🔢' }
+            { word: 'TRILLION', hint: '🔢' }, { word: 'PERCENT', hint: '%' }, { word: 'NUMBER', hint: '🔢' },
+            { word: 'DIGIT', hint: '🔢' }, { word: 'CALCULATE', hint: '➕' }, { word: 'ADDITION', hint: '➕' },
+            { word: 'MULTIPLY', hint: '✖️' }, { word: 'DIVIDE', hint: '➗' }, { word: 'SQUARE', hint: '📐' },
+            { word: 'CUBE', hint: '🎲' }, { word: 'PRIME', hint: '🔢' }, { word: 'ODD', hint: '🔢' },
+            { word: 'EVEN', hint: '🔢' }, { word: 'SUM', hint: '➕' }, { word: 'PRODUCT', hint: '✖️' }
         ]
     },
     fruits: {
@@ -174,8 +174,8 @@ const wordDatabase = {
             { word: 'YAM', hint: '🍠' }, { word: 'PEA', hint: '🟢' }, { word: 'CORN', hint: '🌽' },
             { word: 'KALE', hint: '🥬' }, { word: 'BEET', hint: '🟣' }, { word: 'OKRA', hint: '🟢' },
             { word: 'LEEK', hint: '🟢' }, { word: 'CHILI', hint: '🌶️' }, { word: 'BEAN', hint: '🫘' },
-            { word: 'PEA', hint: '🟢' }, { word: 'YAM', hint: '🍠' }, { word: 'KALE', hint: '🥬' },
-            { word: 'BEET', hint: '🟣' }, { word: 'CORN', hint: '🌽' }, { word: 'OKRA', hint: '🟢' }
+            { word: 'SPINACH', hint: '🥬' }, { word: 'BROCCOLI', hint: '🥦' }, { word: 'MUSHROOM', hint: '🍄' },
+            { word: 'ONION', hint: '🧅' }, { word: 'POTATO', hint: '🥔' }, { word: 'TOMATO', hint: '🍅' }
         ],
         2: [
             { word: 'BEAN', hint: '🫘' }, { word: 'CORN', hint: '🌽' }, { word: 'KALE', hint: '🥬' },
@@ -358,9 +358,23 @@ const wordDatabase = {
         1: [
             { word: 'HAT', hint: '🎩' }, { word: 'CAP', hint: '🧢' }, { word: 'TIE', hint: '👔' },
             { word: 'BAG', hint: '👜' }, { word: 'WIG', hint: '👱' }, { word: 'CUP', hint: '🥤' },
-            { word: 'GUN', hint: '🔫' }, { word: 'JAR', hint: '🫙' }, { word: 'BOX', hint: '📦' },
-            { word: 'KEY', hint: '🔑' }, { word: 'PEN', hint: '🖊️' }, { word: 'MAP', hint: '🗺️' },
-            { word: 'GUN', hint: '🔫' }, { word: 'TOY', hint: '🧸' }, { word: 'CAN', hint: '🥫' }
+            { word: 'JAR', hint: '🫙' }, { word: 'BOX', hint: '📦' }, { word: 'KEY', hint: '🔑' },
+            { word: 'PEN', hint: '🖊️' }, { word: 'MAP', hint: '🗺️' }, { word: 'TOY', hint: '🧸' },
+            { word: 'CAN', hint: '🥫' }, { word: 'BAT', hint: '🏏' }, { word: 'NET', hint: '🥅' }
+        ],
+        3: [
+            { word: 'PANTY', hint: '👙' }, { word: 'SWIMS', hint: '🏊' }, { word: 'FROCKS', hint: '👗' },
+            { word: 'BOOTS', hint: '🥾' }, { word: 'SOCKS', hint: '🧦' }, { word: 'GLOVES', hint: '🧤' },
+            { word: 'SCARF', hint: '🧣' }, { word: 'BELT', hint: '🪢' }, { word: 'COAT', hint: '🧥' },
+            { word: 'VEST', hint: '🦺' }, { word: 'JEANS', hint: '👖' }, { word: 'SUIT', hint: '🤵' },
+            { word: 'ROBE', hint: '👘' }, { word: 'SHORTS', hint: '🩳' }, { word: 'SWEATERS', hint: '🧶' }
+        ],
+        4: [
+            { word: 'JACKET', hint: '🧥' }, { word: 'SWEATER', hint: '🧶' }, { word: 'BLAZER', hint: '🧥' },
+            { word: 'PAJAMAS', hint: '🛏️' }, { word: 'TUXEDO', hint: '🤵' }, { word: 'PONCHO', hint: '🧥' },
+            { word: 'SANDALS', hint: '🩴' }, { word: 'SLIPPERS', hint: '🩴' }, { word: 'SNEAKERS', hint: '👟' },
+            { word: 'MITTENS', hint: '🧤' }, { word: 'OVERALLS', hint: '👖' }, { word: 'LEGGINGS', hint: '👖' },
+            { word: 'CARDIGAN', hint: '🧶' }, { word: 'PARKA', hint: '🧥' }, { word: 'TRENCH', hint: '🧥' }
         ],
         2: [
             { word: 'SHIRT', hint: '👕' }, { word: 'SKIRT', hint: '👗' }, { word: 'DRESS', hint: '👗' },
@@ -400,32 +414,32 @@ const wordDatabase = {
             { word: 'WARM', hint: '🌡️' }, { word: 'COOL', hint: '🌬️' }, { word: 'DRY', hint: '🏜️' }
         ],
         2: [
-            { word: 'RAIN', hint: '🌧️' }, { word: 'SNOW', hint: '❄️' }, { word: 'WIND', hint: '💨' },
-            { word: 'HEAT', hint: '🔥' }, { word: 'COLD', hint: '🥶' }, { word: 'WARM', hint: '🌡️' },
-            { word: 'COOL', hint: '🌬️' }, { word: 'DRY', hint: '🏜️' }, { word: 'WET', hint: '💧' },
-            { word: 'STORM', hint: '⛈️' }, { word: 'CLOUD', hint: '☁️' }, { word: 'FROST', hint: '🥶' },
-            { word: 'HUMID', hint: '💧' }, { word: 'DROUGHT', hint: '🏜️' }, { word: 'THAW', hint: '🌡️' }
+            { word: 'WET', hint: '💧' }, { word: 'STORM', hint: '⛈️' }, { word: 'CLOUD', hint: '☁️' },
+            { word: 'FROST', hint: '🥶' }, { word: 'HUMID', hint: '💧' }, { word: 'DROUGHT', hint: '🏜️' },
+            { word: 'THAW', hint: '🌡️' }, { word: 'GALE', hint: '💨' }, { word: 'GLOOM', hint: '☁️' },
+            { word: 'BRIGHT', hint: '☀️' }, { word: 'DARK', hint: '🌙' }, { word: 'CHILL', hint: '🥶' },
+            { word: 'STEAM', hint: '♨️' }, { word: 'VAPOR', hint: '💨' }
         ],
         3: [
-            { word: 'CLOUD', hint: '☁️' }, { word: 'STORM', hint: '⛈️' }, { word: 'FROST', hint: '🥶' },
+            { word: 'CLOUDY', hint: '☁️' }, { word: 'STORMY', hint: '⛈️' }, { word: 'FOGGY', hint: '🌫️' },
             { word: 'HUMID', hint: '💧' }, { word: 'BREEZE', hint: '🌬️' }, { word: 'SUNNY', hint: '☀️' },
             { word: 'RAINY', hint: '🌧️' }, { word: 'WINDY', hint: '💨' }, { word: 'SNOWY', hint: '❄️' },
-            { word: 'FOGGY', hint: '🌫️' }, { word: 'ICY', hint: '🧊' }, { word: 'CLOUDY', hint: '☁️' },
-            { word: 'STORMY', hint: '⛈️' }, { word: 'CLEAR', hint: '☀️' }, { word: 'MILD', hint: '🌡️' }
+            { word: 'FOGGY', hint: '🌫️' }, { word: 'ICY', hint: '🧊' }, { word: 'CLOUD', hint: '☁️' },
+            { word: 'CLEAR', hint: '☀️' }, { word: 'MILD', hint: '🌡️' }, { word: 'FREEZE', hint: '🧊' }
         ],
         4: [
             { word: 'THUNDER', hint: '⚡' }, { word: 'LIGHTNING', hint: '⚡' }, { word: 'TORNADO', hint: '🌪️' },
             { word: 'HURRICANE', hint: '🌀' }, { word: 'BLIZZARD', hint: '❄️' }, { word: 'MONSOON', hint: '🌧️' },
-            { word: 'SHOWER', hint: '🌧️' }, { word: 'DRIZZLE', hint: '🌦️' }, { word: 'SUNSHINE', hint: '☀️' },
-            { word: 'RAINBOW', hint: '🌈' }, { word: 'CLIMATE', hint: '🌡️' }, { word: 'SEASON', hint: '📅' },
-            { word: 'AUTUMN', hint: '🍂' }, { word: 'SPRING', hint: '🌸' }, { word: 'SUMMER', hint: '☀️' }
+            { word: 'DRIZZLE', hint: '🌦️' }, { word: 'SUNSHINE', hint: '☀️' }, { word: 'RAINBOW', hint: '🌈' },
+            { word: 'CLIMATE', hint: '🌡️' }, { word: 'SEASON', hint: '📅' }, { word: 'AUTUMN', hint: '🍂' },
+            { word: 'SPRING', hint: '🌸' }, { word: 'SUMMER', hint: '☀️' }, { word: 'WINTER', hint: '❄️' }
         ],
         5: [
-            { word: 'LIGHTNING', hint: '⚡' }, { word: 'THUNDER', hint: '⚡' }, { word: 'TORNADO', hint: '🌪️' },
-            { word: 'HURRICANE', hint: '🌀' }, { word: 'BLIZZARD', hint: '❄️' }, { word: 'MONSOON', hint: '🌧️' },
-            { word: 'SHOWER', hint: '🌧️' }, { word: 'DRIZZLE', hint: '🌦️' }, { word: 'SUNSHINE', hint: '☀️' },
-            { word: 'RAINBOW', hint: '🌈' }, { word: 'CLIMATE', hint: '🌡️' }, { word: 'SEASON', hint: '📅' },
-            { word: 'AUTUMN', hint: '🍂' }, { word: 'SPRING', hint: '🌸' }, { word: 'SUMMER', hint: '☀️' }
+            { word: 'CYCLONE', hint: '🌀' }, { word: 'TYPHOON', hint: '🌀' }, { word: 'AVALANCHE', hint: '❄️' },
+            { word: 'FLOOD', hint: '🌊' }, { word: 'DROUGHT', hint: '🏜️' }, { word: 'HEATWAVE', hint: '🔥' },
+            { word: 'CLOUDY', hint: '☁️' }, { word: 'SUNSHINE', hint: '☀️' }, { word: 'SUNRISE', hint: '🌅' },
+            { word: 'SUNSET', hint: '🌇' }, { word: 'OVERCAST', hint: '☁️' }, { word: 'SCORCHING', hint: '🔥' },
+            { word: 'FREEZING', hint: '🥶' }, { word: 'TEMPERATE', hint: '🌡️' }, { word: 'TROPICAL', hint: '🌴' }
         ]
     },
     food: {
@@ -433,15 +447,15 @@ const wordDatabase = {
             { word: 'EGG', hint: '🥚' }, { word: 'RICE', hint: '🍚' }, { word: 'SOUP', hint: '🍲' },
             { word: 'PIE', hint: '🥧' }, { word: 'TART', hint: '🥧' }, { word: 'BUN', hint: '🍞' },
             { word: 'JAM', hint: '🍯' }, { word: 'JELLY', hint: '🍮' }, { word: 'TACO', hint: '🌮' },
-            { word: 'SUSHI', hint: '🍣' }, { word: 'STEAK', hint: '🥩' }, { word: 'BREAD', hint: '🍞' },
-            { word: 'PASTA', hint: '🍝' }, { word: 'SALAD', hint: '🥗' }, { word: 'CURRY', hint: '🍛' }
+            { word: 'SUSHI', hint: '🍣' }, { word: 'STEAK', hint: '🥩' }, { word: 'WAFFLE', hint: '🧇' },
+            { word: 'PANCAKE', hint: '🥞' }, { word: 'DONUT', hint: '🍩' }, { word: 'COOKIE', hint: '🍪' }
         ],
         2: [
-            { word: 'BREAD', hint: '🍞' }, { word: 'PASTA', hint: '🍝' }, { word: 'SALAD', hint: '🥗' },
-            { word: 'CURRY', hint: '🍛' }, { word: 'STEAK', hint: '🥩' }, { word: 'SUSHI', hint: '🍣' },
-            { word: 'TACO', hint: '🌮' }, { word: 'PIZZA', hint: '🍕' }, { word: 'BURGER', hint: '🍔' },
+            { word: 'POTATO', hint: '🥔' }, { word: 'TOMATO', hint: '🍅' }, { word: 'CARROT', hint: '🥕' },
+            { word: 'ONION', hint: '🧅' }, { word: 'PEPPER', hint: '🌶️' }, { word: 'CELERY', hint: '🥬' },
             { word: 'CHEESE', hint: '🧀' }, { word: 'BUTTER', hint: '🧈' }, { word: 'CREAM', hint: '🥛' },
-            { word: 'YOGURT', hint: '🥛' }, { word: 'HONEY', hint: '🍯' }, { word: 'SUGAR', hint: '🍬' }
+            { word: 'YOGURT', hint: '🥛' }, { word: 'HONEY', hint: '🍯' }, { word: 'SUGAR', hint: '🍬' },
+            { word: 'SALT', hint: '🧂' }, { word: 'FLOUR', hint: '🌾' }, { word: 'OIL', hint: '🛢️' }
         ],
         3: [
             { word: 'CHEESE', hint: '🧀' }, { word: 'BUTTER', hint: '🧈' }, { word: 'CREAM', hint: '🥛' },
@@ -451,10 +465,10 @@ const wordDatabase = {
             { word: 'BROTH', hint: '🍲' }, { word: 'NOODLE', hint: '🍜' }, { word: 'DUMPLING', hint: '🥟' }
         ],
         4: [
-            { word: 'CHICKEN', hint: '🍗' }, { word: 'TURKEY', hint: '🦃' }, { word: 'BURGER', hint: '🍔' },
-            { word: 'PIZZA', hint: '🍕' }, { word: 'SANDWICH', hint: '🥪' }, { word: 'PANCAKE', hint: '🥞' },
-            { word: 'WAFFLE', hint: '🧇' }, { word: 'DONUT', hint: '🍩' }, { word: 'COOKIE', hint: '🍪' },
-            { word: 'MUFFIN', hint: '🧁' }, { word: 'BAGEL', hint: '🥯' }, { word: 'PRETZEL', hint: '🥨' },
+            { word: 'CHICKEN', hint: '🍗' }, { word: 'TURKEY', hint: '🦃' }, { word: 'HAMBURGER', hint: '🍔' },
+            { word: 'PEPPERONI', hint: '🍕' }, { word: 'SANDWICH', hint: '🥪' }, { word: 'PRETZEL', hint: '🥨' },
+            { word: 'CHIP', hint: '🍟' }, { word: 'CRISPS', hint: '🥔' }, { word: 'NUTS', hint: '🥜' },
+            { word: 'SEEDS', hint: '🌻' }, { word: 'BREAD', hint: '🍞' }, { word: 'NOODLES', hint: '🍜' },
             { word: 'POPCORN', hint: '🍿' }, { word: 'CHOCOLATE', hint: '🍫' }, { word: 'ICECREAM', hint: '🍦' }
         ],
         5: [
@@ -507,73 +521,73 @@ const wordDatabase = {
             { word: 'DOT', hint: '⚫' }, { word: 'LINE', hint: '➖' }, { word: 'ARC', hint: '⌒' },
             { word: 'OVAL', hint: '🟡' }, { word: 'RING', hint: '💍' }, { word: 'CONE', hint: '🔺' },
             { word: 'CUBE', hint: '🟦' }, { word: 'BOX', hint: '📦' }, { word: 'STAR', hint: '⭐' },
-            { word: 'CROSS', hint: '✖️' }, { word: 'X', hint: '❌' }, { word: 'V', hint: '🔻' },
-            { word: 'L', hint: '📐' }, { word: 'T', hint: '🔨' }, { word: 'Z', hint: '🔤' }
+            { word: 'CROSS', hint: '✖️' }, { word: 'HEART', hint: '❤️' }, { word: 'SPIRAL', hint: '🌀' },
+            { word: 'ANGLE', hint: '📐' }, { word: 'CURVE', hint: '〰️' }, { word: 'LOOP', hint: '🔄' }
         ],
         2: [
             { word: 'SQUARE', hint: '🟦' }, { word: 'CIRCLE', hint: '⭕' }, { word: 'TRIANGLE', hint: '🔺' },
-            { word: 'RECTANGLE', hint: '📐' }, { word: 'DIAMOND', hint: '💎' }, { word: 'OVAL', hint: '🟡' },
-            { word: 'CUBE', hint: '🟦' }, { word: 'CONE', hint: '🔺' }, { word: 'STAR', hint: '⭐' },
-            { word: 'CROSS', hint: '✖️' }, { word: 'HEART', hint: '❤️' }, { word: 'SPIRAL', hint: '🌀' },
-            { word: 'RING', hint: '💍' }, { word: 'BOX', hint: '📦' }, { word: 'PYRAMID', hint: '🔺' }
+            { word: 'RECTANGLE', hint: '📐' }, { word: 'DIAMOND', hint: '💎' }, { word: 'HEXAGON', hint: '⬡' },
+            { word: 'PENTAGON', hint: '⬠' }, { word: 'OCTAGON', hint: '⬢' }, { word: 'PYRAMID', hint: '🔺' },
+            { word: 'SPHERE', hint: '🔵' }, { word: 'CYLINDER', hint: '🔵' }, { word: 'CRESCENT', hint: '🌙' },
+            { word: 'PARALLEL', hint: '➖' }, { word: 'SYMMETRY', hint: '🦋' }, { word: 'MIDPOINT', hint: '📍' }
         ],
         3: [
-            { word: 'SQUARE', hint: '🟦' }, { word: 'CIRCLE', hint: '⭕' }, { word: 'TRIANGLE', hint: '🔺' },
-            { word: 'RECTANGLE', hint: '📐' }, { word: 'DIAMOND', hint: '💎' }, { word: 'OVAL', hint: '🟡' },
-            { word: 'CUBE', hint: '🟦' }, { word: 'CONE', hint: '🔺' }, { word: 'STAR', hint: '⭐' },
-            { word: 'CROSS', hint: '✖️' }, { word: 'HEART', hint: '❤️' }, { word: 'SPIRAL', hint: '🌀' },
-            { word: 'RING', hint: '💍' }, { word: 'BOX', hint: '📦' }, { word: 'PYRAMID', hint: '🔺' }
+            { word: 'ELLIPSE', hint: '🟡' }, { word: 'TRAPEZOID', hint: '📐' }, { word: 'PARALLELOGRAM', hint: '📐' },
+            { word: 'RHOMBUS', hint: '💎' }, { word: 'POLYGON', hint: '⬡' }, { word: 'VERTEX', hint: '📐' },
+            { word: 'PERIMETER', hint: '📏' }, { word: 'DIAGONAL', hint: '╱' }, { word: 'RADIUS', hint: '📐' },
+            { word: 'DIAMETER', hint: '📐' }, { word: 'CHORD', hint: '➖' }, { word: 'AREA', hint: '📐' },
+            { word: 'ANGLE', hint: '📐' }, { word: 'SIDES', hint: '📐' }, { word: 'EDGES', hint: '📐' }
         ],
         4: [
-            { word: 'TRIANGLE', hint: '🔺' }, { word: 'RECTANGLE', hint: '📐' }, { word: 'DIAMOND', hint: '💎' },
-            { word: 'OVAL', hint: '🟡' }, { word: 'CUBE', hint: '🟦' }, { word: 'CONE', hint: '🔺' },
-            { word: 'STAR', hint: '⭐' }, { word: 'CROSS', hint: '✖️' }, { word: 'HEART', hint: '❤️' },
-            { word: 'SPIRAL', hint: '🌀' }, { word: 'RING', hint: '💍' }, { word: 'BOX', hint: '📦' },
-            { word: 'PYRAMID', hint: '🔺' }, { word: 'CYLINDER', hint: '🔵' }, { word: 'SPHERE', hint: '🔵' }
+            { word: 'CIRCUMFERENCE', hint: '⭕' }, { word: 'DODECAHEDRON', hint: '🔶' }, { word: 'ICOSAHEDRON', hint: '🔷' },
+            { word: 'ICOSAHEDRON', hint: '🔷' }, { word: 'FRUSTUM', hint: '🔺' }, { word: 'TORUS', hint: '🍩' },
+            { word: 'PRISM', hint: '📦' }, { word: 'OCTAHEDRON', hint: '🔶' }, { word: 'TETRAHEDRON', hint: '🔺' },
+            { word: 'CONVEX', hint: '🔺' }, { word: 'CONCAVE', hint: '🔻' }, { word: 'BISECTOR', hint: '╱' },
+            { word: 'TANGENT', hint: '〰️' }, { word: 'SECANT', hint: '╱' }, { word: 'ASYMPTOTE', hint: '➖' }
         ],
         5: [
-            { word: 'TRIANGLE', hint: '🔺' }, { word: 'RECTANGLE', hint: '📐' }, { word: 'DIAMOND', hint: '💎' },
-            { word: 'OVAL', hint: '🟡' }, { word: 'CUBE', hint: '🟦' }, { word: 'CONE', hint: '🔺' },
-            { word: 'STAR', hint: '⭐' }, { word: 'CROSS', hint: '✖️' }, { word: 'HEART', hint: '❤️' },
-            { word: 'SPIRAL', hint: '🌀' }, { word: 'RING', hint: '💍' }, { word: 'BOX', hint: '📦' },
-            { word: 'PYRAMID', hint: '🔺' }, { word: 'CYLINDER', hint: '🔵' }, { word: 'SPHERE', hint: '🔵' }
+            { word: 'CONIC', hint: '⭕' }, { word: 'HYPERBOLA', hint: '📈' }, { word: 'PARABOLA', hint: '📉' },
+            { word: 'ELLIPSE', hint: '🟡' }, { word: 'FRACTAL', hint: '🌀' }, { word: 'SIERPINSKI', hint: '🔺' },
+            { word: 'MANDELBROT', hint: '🌀' }, { word: 'MEASURE', hint: '📏' }, { word: 'DEGREES', hint: '°' },
+            { word: 'RADIANS', hint: 'rad' }, { word: 'GRADIENT', hint: '📐' }, { word: 'SLOPE', hint: '📐' },
+            { word: 'AXIS', hint: '📍' }, { word: 'COORDINATE', hint: '📍' }, { word: 'PROTRACTOR', hint: '📐' }
         ]
     },
     toys: {
         1: [
             { word: 'TOP', hint: '🌀' }, { word: 'BALL', hint: '⚽' }, { word: 'DOLL', hint: '🪆' },
             { word: 'KITE', hint: '🪁' }, { word: 'YOYO', hint: '🪀' }, { word: 'BLOCK', hint: '🧱' },
-            { word: 'TRAIN', hint: '🚂' }, { word: 'CAR', hint: '🚗' }, { word: 'BOAT', hint: '🚤' },
-            { word: 'PLANE', hint: '✈️' }, { word: 'ROBOT', hint: '🤖' }, { word: 'TEDDY', hint: '🧸' },
-            { word: 'PUZZLE', hint: '🧩' }, { word: 'GAME', hint: '🎮' }, { word: 'TOY', hint: '🧸' }
+            { word: 'HOOP', hint: '⭕' }, { word: 'RATTLE', hint: '🔔' }, { word: 'CUBES', hint: '🧊' },
+            { word: 'RINGS', hint: '💍' }, { word: 'WAGON', hint: '🛒' }, { word: 'PUPPET', hint: '🧸' },
+            { word: 'BEADS', hint: '📿' }, { word: 'MARBLES', hint: '⚫' }, { word: 'SOLDIER', hint: '♟️' }
         ],
         2: [
-            { word: 'DOLL', hint: '🪆' }, { word: 'KITE', hint: '🪁' }, { word: 'YOYO', hint: '🪀' },
-            { word: 'BLOCK', hint: '🧱' }, { word: 'TRAIN', hint: '🚂' }, { word: 'CAR', hint: '🚗' },
-            { word: 'BOAT', hint: '🚤' }, { word: 'PLANE', hint: '✈️' }, { word: 'ROBOT', hint: '🤖' },
-            { word: 'TEDDY', hint: '🧸' }, { word: 'PUZZLE', hint: '🧩' }, { word: 'GAME', hint: '🎮' },
-            { word: 'TOY', hint: '🧸' }, { word: 'BALL', hint: '⚽' }, { word: 'TOP', hint: '🌀' }
+            { word: 'SLINGSHOT', hint: '🎯' }, { word: 'BICYCLE', hint: '🚲' }, { word: 'TRICYCLE', hint: '🚲' },
+            { word: 'SKATEBOARD', hint: '🛹' }, { word: 'ROLLERBLADE', hint: '🛼' }, { word: 'HOVERBOARD', hint: '🛹' },
+            { word: 'DRONE', hint: '🚁' }, { word: 'RACECAR', hint: '🏎️' }, { word: 'JEEPS', hint: '🚙' },
+            { word: 'TRACTOR', hint: '🚜' }, { word: 'BULLDOZER', hint: '🚜' }, { word: 'CRANE', hint: '🏗️' },
+            { word: 'FIRETRUCK', hint: '🚒' }, { word: 'AMBULANCE', hint: '🚑' }, { word: 'HELICOPTER', hint: '🚁' }
         ],
         3: [
-            { word: 'DOLL', hint: '🪆' }, { word: 'KITE', hint: '🪁' }, { word: 'YOYO', hint: '🪀' },
-            { word: 'BLOCK', hint: '🧱' }, { word: 'TRAIN', hint: '🚂' }, { word: 'CAR', hint: '🚗' },
-            { word: 'BOAT', hint: '🚤' }, { word: 'PLANE', hint: '✈️' }, { word: 'ROBOT', hint: '🤖' },
-            { word: 'TEDDY', hint: '🧸' }, { word: 'PUZZLE', hint: '🧩' }, { word: 'GAME', hint: '🎮' },
-            { word: 'TOY', hint: '🧸' }, { word: 'BALL', hint: '⚽' }, { word: 'TOP', hint: '🌀' }
+            { word: 'CHESS', hint: '♟️' }, { word: 'CHECKERS', hint: '🔴' }, { word: 'BACKGAMMON', hint: '🎲' },
+            { word: 'MONOPOLY', hint: '🏠' }, { word: 'SCRABBLE', hint: '🔤' }, { word: 'CONNECT4', hint: '🔵' },
+            { word: 'TWISTER', hint: '🎯' }, { word: 'JENGA', hint: '🧱' }, { word: 'DOMINOES', hint: '⬛' },
+            { word: 'CANDYLAND', hint: '🍬' }, { word: 'CLUE', hint: '🔍' }, { word: 'OPERATION', hint: '🏥' },
+            { word: 'HOBBIT', hint: '🧙' }, { word: 'BATTLESHIP', hint: '🚢' }, { word: 'RISK', hint: '🎖️' }
         ],
         4: [
-            { word: 'DOLLHOUSE', hint: '🏠' }, { word: 'ROBOT', hint: '🤖' }, { word: 'PUZZLE', hint: '🧩' },
-            { word: 'GAME', hint: '🎮' }, { word: 'TOY', hint: '🧸' }, { word: 'BALL', hint: '⚽' },
-            { word: 'TOP', hint: '🌀' }, { word: 'DOLL', hint: '🪆' }, { word: 'KITE', hint: '🪁' },
-            { word: 'YOYO', hint: '🪀' }, { word: 'BLOCK', hint: '🧱' }, { word: 'TRAIN', hint: '🚂' },
-            { word: 'CAR', hint: '🚗' }, { word: 'BOAT', hint: '🚤' }, { word: 'PLANE', hint: '✈️' }
+            { word: 'DOLLHOUSE', hint: '🏠' }, { word: 'MECHANIX', hint: '🔧' }, { word: 'MAGNETS', hint: '🧲' },
+            { word: 'MICROSCOPE', hint: '🔬' }, { word: 'TELESCOPE', hint: '🔭' }, { word: 'CHEMISTRY', hint: '⚗️' },
+            { word: 'TELESCOPE', hint: '🔭' }, { word: 'BINOCULARS', hint: '🔭' }, { word: 'COMPASS', hint: '🧭' },
+            { word: 'GLOBE', hint: '🌍' }, { word: 'PUZZLE', hint: '🧩' }, { word: 'RC-CAR', hint: '🚗' },
+            { word: 'RC-PLANE', hint: '✈️' }, { word: 'RC-BOAT', hint: '🚤' }, { word: 'DRONE', hint: '🚁' }
         ],
         5: [
-            { word: 'DOLLHOUSE', hint: '🏠' }, { word: 'ROBOT', hint: '🤖' }, { word: 'PUZZLE', hint: '🧩' },
-            { word: 'GAME', hint: '🎮' }, { word: 'TOY', hint: '🧸' }, { word: 'BALL', hint: '⚽' },
-            { word: 'TOP', hint: '🌀' }, { word: 'DOLL', hint: '🪆' }, { word: 'KITE', hint: '🪁' },
-            { word: 'YOYO', hint: '🪀' }, { word: 'BLOCK', hint: '🧱' }, { word: 'TRAIN', hint: '🚂' },
-            { word: 'CAR', hint: '🚗' }, { word: 'BOAT', hint: '🚤' }, { word: 'PLANE', hint: '✈️' }
+            { word: 'PLAYSTATION', hint: '🎮' }, { word: 'XBOX', hint: '🎮' }, { word: 'NINTENDO', hint: '🎮' },
+            { word: 'GAMECUBE', hint: '📦' }, { word: 'SWITCH', hint: '🎮' }, { word: 'VR-SET', hint: '🥽' },
+            { word: 'OCULUS', hint: '🥽' }, { word: 'HOLOLENS', hint: '🥽' }, { word: 'ARCADE', hint: '🕹️' },
+            { word: 'PINBALL', hint: '🎱' }, { word: 'FOOSBALL', hint: '⚽' }, { word: 'AIRHOCKEY', hint: '🏒' },
+            { word: 'POOL', hint: '🎱' }, { word: 'DARTS', hint: '🎯' }, { word: 'BOWLING', hint: '🎳' }
         ]
     }
 };
