@@ -713,54 +713,56 @@ const wordDatabase = {
     shapes: {
         1: [
             { word: 'DOT', hint: '⚫' }, { word: 'LINE', hint: '➖' }, { word: 'ARC', hint: '⌒' },
-            { word: 'OVAL', hint: '🟡' }, { word: 'RING', hint: '💍' }, { word: 'CONE', hint: '🔺' },
+            { word: 'OVAL', hint: '🥚' }, { word: 'RING', hint: '💍' }, { word: 'CONE', hint: '🍦' },
             { word: 'CUBE', hint: '🟦' }, { word: 'BOX', hint: '📦' }, { word: 'STAR', hint: '⭐' },
             { word: 'CROSS', hint: '✖️' }, { word: 'HEART', hint: '❤️' }, { word: 'SPIRAL', hint: '🌀' },
-            { word: 'ANGLE', hint: '📐' }, { word: 'CURVE', hint: '〰️' }, { word: 'LOOP', hint: '🔄' },
-            { word: 'BALL', hint: '⚽' }, { word: 'PYRAMID', hint: '🔺' }, { word: 'SPHERE', hint: '🔵' },
-            { word: 'PRISM', hint: '📐' }, { word: 'TORUS', hint: '🍩' }, { word: 'SPIKE', hint: '📍' },
-            { word: 'SPIRAL', hint: '🌀' }, { word: 'WAVE', hint: '〰️' }, { word: 'ZIGZAG', hint: '〰️' }
+            { word: 'CURVE', hint: '〰️' }, { word: 'LOOP', hint: '🔄' }, { word: 'WAVE', hint: '🌊' },
+            { word: 'BALL', hint: '⚽' }, { word: 'PYRAMID', hint: '🏛️' }, { word: 'SPHERE', hint: '🌍' },
+            { word: 'PRISM', hint: '🔷' }, { word: 'TORUS', hint: '🍩' }, { word: 'SPIKE', hint: '📍' },
+            { word: 'ZIGZAG', hint: '〰️' }, { word: 'ARROW', hint: '➡️' }, { word: 'HEXAGON', hint: '⬡' }
         ],
         2: [
             { word: 'SQUARE', hint: '🟦' }, { word: 'CIRCLE', hint: '⭕' }, { word: 'TRIANGLE', hint: '🔺' },
-            { word: 'RECTANGLE', hint: '📐' }, { word: 'DIAMOND', hint: '💎' }, { word: 'HEXAGON', hint: '⬡' },
-            { word: 'PENTAGON', hint: '⬠' }, { word: 'OCTAGON', hint: '⬢' }, { word: 'PYRAMID', hint: '🔺' },
-            { word: 'SPHERE', hint: '🔵' }, { word: 'CYLINDER', hint: '🔵' }, { word: 'CRESCENT', hint: '🌙' },
-            { word: 'PARALLEL', hint: '➖' }, { word: 'SYMMETRY', hint: '🦋' }, { word: 'MIDPOINT', hint: '📍' },
-            { word: 'OVAL', hint: '🟡' }, { word: 'ELLIPSE', hint: '🟡' }, { word: 'PARABOLA', hint: '📉' },
-            { word: 'CONE', hint: '🔺' }, { word: 'STAR', hint: '⭐' }, { word: 'CROSS', hint: '✖️' },
-            { word: 'ARROW', hint: '➡️' }, { word: 'HEART', hint: '❤️' }, { word: 'FLOWER', hint: '🌸' }
+            { word: 'RECTANGLE', hint: '📐' }, { word: 'DIAMOND', hint: '💎' }, { word: 'OVAL', hint: '🥚' },
+            { word: 'PENTAGON', hint: '⬠' }, { word: 'OCTAGON', hint: '⬢' }, { word: 'CRESCENT', hint: '🌙' },
+            { word: 'SPHERE', hint: '🌍' }, { word: 'CYLINDER', hint: '🥫' }, { word: 'ELLIPSE', hint: '🥚' },
+            { word: 'PARABOLA', hint: '📉' }, { word: 'HYPERBOLA', hint: '📈' }, { word: 'STAR', hint: '⭐' },
+            { word: 'CROSS', hint: '✖️' }, { word: 'HEART', hint: '❤️' }, { word: 'HEPTAGON', hint: '⬡' },
+            { word: 'NONAGON', hint: '⬡' }, { word: 'DECAGON', hint: '⬡' }, { word: 'ICOSAGON', hint: '⬡' },
+            { word: 'TRAPEZOID', hint: '🟨' }, { word: 'PARALLELOGRAM', hint: '⬜' }, { word: 'RHOMBUS', hint: '💎' }
         ],
         3: [
-            { word: 'ELLIPSE', hint: '🟡' }, { word: 'TRAPEZOID', hint: '📐' }, { word: 'PARALLELOGRAM', hint: '📐' },
-            { word: 'RHOMBUS', hint: '💎' }, { word: 'POLYGON', hint: '⬡' }, { word: 'VERTEX', hint: '📐' },
-            { word: 'PERIMETER', hint: '📏' }, { word: 'DIAGONAL', hint: '╱' }, { word: 'RADIUS', hint: '📐' },
-            { word: 'DIAMETER', hint: '📐' }, { word: 'CHORD', hint: '➖' }, { word: 'AREA', hint: '📐' },
-            { word: 'ANGLE', hint: '📐' }, { word: 'SIDES', hint: '📐' }, { word: 'EDGES', hint: '📐' },
-            { word: 'TRIANGLE', hint: '🔺' }, { word: 'RECTANGLE', hint: '📐' }, { word: 'SQUARE', hint: '🟦' },
-            { word: 'CIRCLE', hint: '⭕' }, { word: 'HEXAGON', hint: '⬡' }, { word: 'HEPTAGON', hint: '⬡' },
-            { word: 'NONAGON', hint: '⬡' }, { word: 'DECAGON', hint: '⬡' }, { word: 'ICOSAGON', hint: '⬡' }
+            { word: 'PYRAMID', hint: '🏛️' }, { word: 'SPHERE', hint: '🌍' }, { word: 'CYLINDER', hint: '🥫' },
+            { word: 'CONE', hint: '🍦' }, { word: 'CUBE', hint: '🟦' }, { word: 'TORUS', hint: '🍩' },
+            { word: 'PRISM', hint: '🔷' }, { word: 'TETRAHEDRON', hint: '🔶' }, { word: 'OCTAHEDRON', hint: '🔶' },
+            { word: 'DODECAHEDRON', hint: '🔶' }, { word: 'ICOSAHEDRON', hint: '🔷' }, { word: 'FRUSTUM', hint: '🔻' },
+            { word: 'RHOMBUS', hint: '💎' }, { word: 'HEXAGON', hint: '⬡' }, { word: 'PENTAGON', hint: '⬠' },
+            { word: 'OCTAGON', hint: '⬢' }, { word: 'CIRCLE', hint: '⭕' }, { word: 'OVAL', hint: '🥚' },
+            { word: 'SQUARE', hint: '🟦' }, { word: 'RECTANGLE', hint: '📐' }, { word: 'TRIANGLE', hint: '🔺' },
+            { word: 'ELLIPSE', hint: '🥚' }, { word: 'SPIRAL', hint: '🌀' }, { word: 'ARC', hint: '⌒' },
+            { word: 'CURVE', hint: '〰️' }
         ],
         4: [
-            { word: 'CIRCUMFERENCE', hint: '⭕' }, { word: 'DODECAHEDRON', hint: '🔶' }, { word: 'ICOSAHEDRON', hint: '🔷' },
-            { word: 'FRUSTUM', hint: '🔺' }, { word: 'TORUS', hint: '🍩' }, { word: 'PRISM', hint: '📦' },
-            { word: 'OCTAHEDRON', hint: '🔶' }, { word: 'TETRAHEDRON', hint: '🔺' }, { word: 'CONVEX', hint: '🔺' },
-            { word: 'CONCAVE', hint: '🔻' }, { word: 'BISECTOR', hint: '╱' }, { word: 'TANGENT', hint: '〰️' },
-            { word: 'SECANT', hint: '╱' }, { word: 'ASYMPTOTE', hint: '➖' }, { word: 'HYPERBOLA', hint: '📈' },
-            { word: 'ELLIPSE', hint: '🟡' }, { word: 'PARABOLA', hint: '📉' }, { word: 'SPIRAL', hint: '🌀' },
-            { word: 'HELIX', hint: '🌀' }, { word: 'CYLINDER', hint: '🔵' }, { word: 'CONE', hint: '🔺' },
-            { word: 'SPHERE', hint: '🔵' }, { word: 'CUBE', hint: '🟦' }, { word: 'PYRAMID', hint: '🔺' }
+            { word: 'CIRCUMFERENCE', hint: '⭕' }, { word: 'POLYHEDRON', hint: '🔶' }, { word: 'HELIX', hint: '🌀' },
+            { word: 'FRACTAL', hint: '🌀' }, { word: 'SIERPINSKI', hint: '🔺' }, { word: 'MANDELBROT', hint: '🌀' },
+            { word: 'TESSELATION', hint: '🔷' }, { word: 'MANIFOLD', hint: '🌀' }, { word: 'CUBE', hint: '🟦' },
+            { word: 'PYRAMID', hint: '🏛️' }, { word: 'SPHERE', hint: '🌍' }, { word: 'CYLINDER', hint: '🥫' },
+            { word: 'CONE', hint: '🍦' }, { word: 'TORUS', hint: '🍩' }, { word: 'PRISM', hint: '🔷' },
+            { word: 'TETRAHEDRON', hint: '🔶' }, { word: 'OCTAHEDRON', hint: '🔶' }, { word: 'DODECAHEDRON', hint: '🔶' },
+            { word: 'ICOSAHEDRON', hint: '🔷' }, { word: 'HEXAGON', hint: '⬡' }, { word: 'PENTAGON', hint: '⬠' },
+            { word: 'OCTAGON', hint: '⬢' }, { word: 'OVAL', hint: '🥚' }, { word: 'SPIRAL', hint: '🌀' },
+            { word: 'ELLIPSE', hint: '🥚' }
         ],
         5: [
-            { word: 'CONIC', hint: '⭕' }, { word: 'HYPERBOLA', hint: '📈' }, { word: 'PARABOLA', hint: '📉' },
-            { word: 'ELLIPSE', hint: '🟡' }, { word: 'FRACTAL', hint: '🌀' }, { word: 'SIERPINSKI', hint: '🔺' },
-            { word: 'MANDELBROT', hint: '🌀' }, { word: 'MEASURE', hint: '📏' }, { word: 'DEGREES', hint: '°' },
-            { word: 'RADIANS', hint: 'rad' }, { word: 'GRADIENT', hint: '📐' }, { word: 'SLOPE', hint: '📐' },
-            { word: 'AXIS', hint: '📍' }, { word: 'COORDINATE', hint: '📍' }, { word: 'PROTRACTOR', hint: '📐' },
-            { word: 'COMPASS', hint: '🧭' }, { word: 'PROTRACTOR', hint: '📐' }, { word: 'ALGEBRAIC', hint: 'X' },
-            { word: 'TOPOLOGY', hint: '🍩' }, { word: 'GEOMETRY', hint: '📐' }, { word: 'TRIGONOMETRY', hint: '📐' },
-            { word: 'CALCULUS', hint: '∫' }, { word: 'MANIFOLD', hint: '🌀' }, { word: 'TESSELATION', hint: '🔷' },
-            { word: 'POLYHEDRON', hint: '🔶' }
+            { word: 'CONIC', hint: '⭕' }, { word: 'PARABOLA', hint: '📉' }, { word: 'HYPERBOLA', hint: '📈' },
+            { word: 'ELLIPSE', hint: '🥚' }, { word: 'FRACTAL', hint: '🌀' }, { word: 'SIERPINSKI', hint: '🔺' },
+            { word: 'MANDELBROT', hint: '🌀' }, { word: 'TESSELATION', hint: '🔷' }, { word: 'MANIFOLD', hint: '🌀' },
+            { word: 'HELIX', hint: '🌀' }, { word: 'SPIRAL', hint: '🌀' }, { word: 'PYRAMID', hint: '🏛️' },
+            { word: 'SPHERE', hint: '🌍' }, { word: 'CYLINDER', hint: '🥫' }, { word: 'CONE', hint: '🍦' },
+            { word: 'CUBE', hint: '🟦' }, { word: 'TORUS', hint: '🍩' }, { word: 'PRISM', hint: '🔷' },
+            { word: 'TETRAHEDRON', hint: '🔶' }, { word: 'OCTAHEDRON', hint: '🔶' }, { word: 'DODECAHEDRON', hint: '🔶' },
+            { word: 'ICOSAHEDRON', hint: '🔷' }, { word: 'POLYHEDRON', hint: '🔶' }, { word: 'FRUSTUM', hint: '🔻' },
+            { word: 'OVAL', hint: '🥚' }
         ]
     },
     toys: {
