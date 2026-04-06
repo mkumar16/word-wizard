@@ -1,8 +1,9 @@
 node_modules/
 android/
-webview/app/build/
 webview/.gradle/
 .expo/
-*.apk
 *.ipa
 .DS_Store
+
+# Keep APK in releases, not in git
+# We upload releases manually to GitHub releases page

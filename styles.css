@@ -465,7 +465,7 @@ body {
 .modal-content {
     background: #fff;
     border-radius: 30px;
-    padding: 40px 30px;
+    padding: 0;
     text-align: center;
     max-width: 400px;
     width: 100%;
@@ -683,9 +683,11 @@ body {
 
 /* Category Selection Grid */
 .category-screen {
-    max-width: 700px;
-    max-height: 85vh;
+    max-width: 400px;
+    max-height: 80vh;
     overflow-y: auto;
+    padding: 40px 30px;
+    text-align: center;
 }
 
 .category-grid {
