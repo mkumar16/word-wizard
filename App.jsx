@@ -991,6 +991,9 @@ export default function App() {
       {showCategoryModal && (
         <View style={styles.modal}>
           <View style={[styles.modalContent, styles.categoryModalContent]}>
+            <TouchableOpacity style={styles.categoryBackBtn} onPress={() => setShowCategoryModal(false)}>
+              <Text style={styles.categoryBackBtnText}>← Back</Text>
+            </TouchableOpacity>
             <Text style={styles.modalIcon}>📚</Text>
             <Text style={styles.modalTitle}>Choose a Category</Text>
             <ScrollView style={styles.categoryScrollView} showsVerticalScrollIndicator={false}>
@@ -1448,6 +1451,21 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     gap: 12,
     marginBottom: 12,
+  },
+  categoryBackBtn: {
+    position: 'absolute',
+    top: 15,
+    left: 15,
+    backgroundColor: '#f3f4f6',
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+    borderRadius: 20,
+    zIndex: 10,
+  },
+  categoryBackBtnText: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#6b7280',
   },
   categoryCard: {
     width: 95,

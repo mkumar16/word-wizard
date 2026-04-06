@@ -628,7 +628,9 @@ const elements = {
     wordsLearned: document.getElementById('words-learned'),
     soundToggle: document.getElementById('sound-toggle'),
     soundIcon: document.getElementById('sound-icon'),
-    confettiContainer: document.getElementById('confetti-container')
+    confettiContainer: document.getElementById('confetti-container'),
+    categoryModal: document.getElementById('category-modal'),
+    categoryBackBtn: document.getElementById('category-back-btn')
 };
 
 // Audio Context for sound effects
@@ -742,6 +744,14 @@ function initGame() {
     elements.skipBtn.addEventListener('click', skipWord);
     elements.resetBtn.addEventListener('click', resetWord);
     elements.soundToggle.addEventListener('click', toggleSound);
+    elements.categoryBackBtn.addEventListener('click', backToStart);
+}
+
+// Go back from category selection to start screen
+function backToStart() {
+    playSound('click');
+    elements.categoryModal.classList.remove('show');
+    elements.startModal.classList.add('show');
 }
 
 // Start game - show category selection
