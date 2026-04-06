@@ -20,7 +20,8 @@ const categories = {
 };
 
 // Word Database organized by category and level
-\n\nconst wordDatabase = {
+
+const wordDatabase = {
     general: {
         1: [
             { word: 'CAT', hint: '🐱' }, { word: 'DOG', hint: '🐕' }, { word: 'SUN', hint: '☀️' },
@@ -815,60 +816,9 @@ const categories = {
             { word: 'GIMMICKS', hint: '🎲' }
         ]
     }
-};\n\n// Game State
-const gameState = {
-    currentCategory: 'general',
-    currentLevel: 1,
-    currentWordIndex: 0,
-    currentWord: null,
-    score: 0,
-    streak: 0,
-    bestStreak: 0,
-    hintsUsed: 0,
-    wordsCompleted: 0,
-    levelWordsCompleted: 0,
-    attempts: 0,
-    maxAttempts: 0,
-    soundEnabled: true,
-    gameStarted: false,
-    shuffledWords: [],
-    selectedTile: null
 };
 
-// DOM Elements
-const elements = {
-    score: document.getElementById('score'),
-    streak: document.getElementById('streak'),
-    streakContainer: document.getElementById('streak-container'),
-    level: document.getElementById('level'),
-    progressFill: document.getElementById('progress-fill'),
-    progressText: document.getElementById('progress-text'),
-    hintEmoji: document.getElementById('hint-emoji'),
-    hintText: document.getElementById('hint-text'),
-    wordSlots: document.getElementById('word-slots'),
-    letterBank: document.getElementById('letter-bank'),
-    feedback: document.getElementById('feedback'),
-    hintBtn: document.getElementById('hint-btn'),
-    skipBtn: document.getElementById('skip-btn'),
-    resetBtn: document.getElementById('reset-btn'),
-    startModal: document.getElementById('start-modal'),
-    startBtn: document.getElementById('start-btn'),
-    levelModal: document.getElementById('level-modal'),
-    nextLevelBtn: document.getElementById('next-level-btn'),
-    gameCompleteModal: document.getElementById('game-complete-modal'),
-    playAgainBtn: document.getElementById('play-again-btn'),
-    modalScore: document.getElementById('modal-score'),
-    modalLevel: document.getElementById('modal-level'),
-    starsDisplay: document.getElementById('stars-display'),
-    finalScore: document.getElementById('final-score'),
-    bestStreak: document.getElementById('best-streak'),
-    wordsLearned: document.getElementById('words-learned'),
-    soundToggle: document.getElementById('sound-toggle'),
-    soundIcon: document.getElementById('sound-icon'),
-    confettiContainer: document.getElementById('confetti-container'),
-    categoryModal: document.getElementById('category-modal'),
-    categoryBackBtn: document.getElementById('category-back-btn')
-};\n\n// Game State
+// Game State
 const gameState = {
     currentCategory: 'general',
     currentLevel: 1,
