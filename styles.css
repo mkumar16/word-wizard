@@ -684,6 +684,8 @@ body {
 /* Category Selection Grid */
 .category-screen {
     max-width: 700px;
+    max-height: 85vh;
+    overflow-y: auto;
 }
 
 .category-grid {

@@ -995,16 +995,24 @@ export default function App() {
             <Text style={styles.modalTitle}>Choose a Category</Text>
             <ScrollView style={styles.categoryScrollView} showsVerticalScrollIndicator={false}>
               <View style={styles.categoryGrid}>
-                {Object.entries(categories).map(([key, cat]) => (
-                  <TouchableOpacity
-                    key={key}
-                    style={[styles.categoryCard, { backgroundColor: cat.color }]}
-                    onPress={() => selectCategory(key)}
-                  >
-                    <Text style={styles.categoryIcon}>{cat.icon}</Text>
-                    <Text style={styles.categoryName}>{cat.name}</Text>
-                  </TouchableOpacity>
-                ))}
+                {[0, 1, 2, 3, 4].map(rowIndex => {
+                  const rowCategories = Object.entries(categories).slice(rowIndex * 3, rowIndex * 3 + 3);
+                  if (rowCategories.length === 0) return null;
+                  return (
+                    <View key={rowIndex} style={styles.categoryRow}>
+                      {rowCategories.map(([key, cat]) => (
+                        <TouchableOpacity
+                          key={key}
+                          style={[styles.categoryCard, { backgroundColor: cat.color }]}
+                          onPress={() => selectCategory(key)}
+                        >
+                          <Text style={styles.categoryIcon}>{cat.icon}</Text>
+                          <Text style={styles.categoryName}>{cat.name}</Text>
+                        </TouchableOpacity>
+                      ))}
+                    </View>
+                  );
+                })}
               </View>
             </ScrollView>
           </View>
@@ -1433,15 +1441,17 @@ const styles = StyleSheet.create({
     maxHeight: 400,
   },
   categoryGrid: {
+    flexDirection: 'column',
+  },
+  categoryRow: {
     flexDirection: 'row',
-    flexWrap: 'wrap',
     justifyContent: 'center',
     gap: 12,
-    paddingHorizontal: 5,
+    marginBottom: 12,
   },
   categoryCard: {
-    width: '28%',
-    aspectRatio: 1,
+    width: 95,
+    height: 95,
     borderRadius: 20,
     justifyContent: 'center',
     alignItems: 'center',
