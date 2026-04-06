@@ -356,11 +356,11 @@ const wordDatabase = {
     },
     clothing: {
         1: [
-            { word: 'HAT', hint: '🎩' }, { word: 'CAP', hint: '🧢' }, { word: 'BRA', hint: '👙' },
-            { word: 'BRA', hint: '👙' }, { word: 'TIE', hint: '👔' }, { word: 'BAG', hint: '👜' },
-            { word: 'BRA', hint: '👙' }, { word: 'BRA', hint: '👙' }, { word: 'BRA', hint: '👙' },
-            { word: 'BRA', hint: '👙' }, { word: 'BRA', hint: '👙' }, { word: 'BRA', hint: '👙' },
-            { word: 'BRA', hint: '👙' }, { word: 'BRA', hint: '👙' }, { word: 'BRA', hint: '👙' }
+            { word: 'HAT', hint: '🎩' }, { word: 'CAP', hint: '🧢' }, { word: 'TIE', hint: '👔' },
+            { word: 'BAG', hint: '👜' }, { word: 'WIG', hint: '👱' }, { word: 'CUP', hint: '🥤' },
+            { word: 'GUN', hint: '🔫' }, { word: 'JAR', hint: '🫙' }, { word: 'BOX', hint: '📦' },
+            { word: 'KEY', hint: '🔑' }, { word: 'PEN', hint: '🖊️' }, { word: 'MAP', hint: '🗺️' },
+            { word: 'GUN', hint: '🔫' }, { word: 'TOY', hint: '🧸' }, { word: 'CAN', hint: '🥫' }
         ],
         2: [
             { word: 'SHIRT', hint: '👕' }, { word: 'SKIRT', hint: '👗' }, { word: 'DRESS', hint: '👗' },
