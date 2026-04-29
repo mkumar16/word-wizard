@@ -284,7 +284,7 @@ const wordDatabase = {
           { word: 'BROCCOLI', hint: '🥦' }, { word: 'CABBAGE', hint: '🥬' }, { word: 'PUMPKIN', hint: '🎃' },
           { word: 'RADISHES', hint: '🔴' }, { word: 'LETTUCES', hint: '🥬' }, { word: 'POTATOES', hint: '🥔' },
           { word: 'JICAMA', hint: '🥔' }, { word: 'ENDIVE', hint: '🥬' }, { word: 'ESCAROLE', hint: '🥬' },
-          { word: 'CHARD', hint: '🥬' }, { word: 'COLLARDS', hint: '🥬' }, { word: 'bokchoy', hint: '🥬' },
+          { word: 'CHARD', hint: '🥬' }, { word: 'COLLARDS', hint: '🥬' }, { word: 'BOKCHOY', hint: '🥬' },
           { word: 'RAPINI', hint: '🥬' }, { word: 'CHICORY', hint: '🥬' }, { word: 'WATERCRESS', hint: '🌿' }
       ]
   },
@@ -390,8 +390,8 @@ const wordDatabase = {
           { word: 'CONDOR', hint: '🦅' }, { word: 'FALCON', hint: '🦅' }, { word: 'OSTRICH', hint: '🦩' },
           { word: 'EMU', hint: '🦅' }, { word: 'CASSOWARY', hint: '🦩' }, { word: 'KIWI', hint: '🐦' },
           { word: 'TOUCAN', hint: '🦜' }, { word: 'HORNBILL', hint: '🦅' }, { word: 'ROADRUNNER', hint: '🐦' },
-          { word: 'Secretarybird', hint: '🦅' }, { word: 'POTO', hint: '🐦' }, { word: 'HOATZIN', hint: '🐦' },
-          { word: 'Touraco', hint: '🐦' }
+          { word: 'SECRETARYBIRD', hint: '🦅' }, { word: 'POTO', hint: '🐦' }, { word: 'HOATZIN', hint: '🐦' },
+          { word: 'TOURACO', hint: '🐦' }
       ]
   },
   vehicles: {
@@ -990,10 +990,10 @@ export default function App() {
   };
 
   const showLevelComplete = () => {
-    const totalAttempts = gameState.attempts;
+    const const totalattempts = gameState.attempts;
     let earnedStars = 1;
-    if (totalAttempts === 0) earnedStars = 3;
-    else if (totalAttempts <= 5) earnedStars = 2;
+    if (totalattempts === 0) earnedStars = 3;
+    else if (totalattempts <= 5) earnedStars = 2;
     setStars(earnedStars);
 
     if (gameState.currentLevel >= 5) {

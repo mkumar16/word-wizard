@@ -283,7 +283,7 @@ const wordDatabase = {
             { word: 'BROCCOLI', hint: '🥦' }, { word: 'CABBAGE', hint: '🥬' }, { word: 'PUMPKIN', hint: '🎃' },
             { word: 'RADISHES', hint: '🔴' }, { word: 'LETTUCES', hint: '🥬' }, { word: 'POTATOES', hint: '🥔' },
             { word: 'JICAMA', hint: '🥔' }, { word: 'ENDIVE', hint: '🥬' }, { word: 'ESCAROLE', hint: '🥬' },
-            { word: 'CHARD', hint: '🥬' }, { word: 'COLLARDS', hint: '🥬' }, { word: 'bokchoy', hint: '🥬' },
+            { word: 'CHARD', hint: '🥬' }, { word: 'COLLARDS', hint: '🥬' }, { word: 'BOKCHOY', hint: '🥬' },
             { word: 'RAPINI', hint: '🥬' }, { word: 'CHICORY', hint: '🥬' }, { word: 'WATERCRESS', hint: '🌿' }
         ]
     },
@@ -389,8 +389,8 @@ const wordDatabase = {
             { word: 'CONDOR', hint: '🦅' }, { word: 'FALCON', hint: '🦅' }, { word: 'OSTRICH', hint: '🦩' },
             { word: 'EMU', hint: '🦅' }, { word: 'CASSOWARY', hint: '🦩' }, { word: 'KIWI', hint: '🐦' },
             { word: 'TOUCAN', hint: '🦜' }, { word: 'HORNBILL', hint: '🦅' }, { word: 'ROADRUNNER', hint: '🐦' },
-            { word: 'Secretarybird', hint: '🦅' }, { word: 'POTO', hint: '🐦' }, { word: 'HOATZIN', hint: '🐦' },
-            { word: 'Touraco', hint: '🐦' }
+            { word: 'SECRETARYBIRD', hint: '🦅' }, { word: 'POTO', hint: '🐦' }, { word: 'HOATZIN', hint: '🐦' },
+            { word: 'TOURACO', hint: '🐦' }
         ]
     },
     vehicles: {

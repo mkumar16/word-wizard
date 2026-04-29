@@ -7,3 +7,5 @@ webview/.gradle/
 
 # Keep APK in releases, not in git
 # We upload releases manually to GitHub releases page
+# Android build artifacts
+webview/build/
